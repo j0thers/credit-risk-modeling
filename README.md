@@ -26,7 +26,7 @@ XGBoost crudo lideró en validación por ROC-AUC y en prueba obtuvo los menores 
 
 ## Estructura auditada
 
-El árbol enumera los archivos del workspace y omite la caché generada por Python. La carpeta data y el notebook exploratorio residen dentro de los ZIP históricos. En la raíz no hay checkout de Git, carpeta tests ni segundo notebook de preprocesamiento.
+El árbol enumera los archivos del workspace y omite la caché generada por Python. La carpeta data y el notebook exploratorio residen dentro de los ZIP históricos. La rama principal es `main`. La raíz carece de carpeta tests y de un segundo notebook de preprocesamiento.
 
 ```text
 credit-risk-modeling/
@@ -106,10 +106,10 @@ El ZIP de análisis exploratorio conserva por separado las figuras 01 a 04 y sus
 
 ## Reproducción
 
-1. Cuando el repositorio esté publicado, sustituye `<URL_GITHUB>` por la URL del repositorio.
+1. Clona el repositorio y prepara el entorno.
 
    ```powershell
-   git clone <URL_GITHUB> credit-risk-modeling
+   git clone https://github.com/j0thers/credit-risk-modeling.git credit-risk-modeling
    cd credit-risk-modeling
    py -3.12 -m venv .venv
    .\.venv\Scripts\Activate.ps1
