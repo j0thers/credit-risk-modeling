@@ -1,0 +1,2 @@
+,primero,segundo,delta,ic95_inferior,ic95_superior,p_bilateral
+dos mejores en test (exploratorio),prob_xgb,prob_rf,0.0017312400286075835,-0.001897014427573368,0.005353068953897774,0.35764235764235763

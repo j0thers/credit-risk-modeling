@@ -1,0 +1,27 @@
+{
+  "modelo_final": "prob_xgb",
+  "calibrador_final": "isotonic",
+  "seed": 42,
+  "pliegues_val": 5,
+  "n_train_val_test": [
+    21000,
+    4500,
+    4500
+  ],
+  "incumplimientos_test": 996,
+  "youden_cruda_fase6": 0.20779038965702057,
+  "pd_calibrada_en_el_corte": 0.24242424242424243,
+  "decisiones_distintas_corte_transformado": 0,
+  "decisiones_distintas_corte_literal": 0,
+  "pd_media_cruda": 0.22063381385513478,
+  "pd_media_calibrada": 0.22131018795494517,
+  "pd_extremas_incorrectas_en_test": 2,
+  "bills_negativos": 96,
+  "bills_superiores_al_limite": 335,
+  "entradas_sha256": {
+    "06_probabilities_val.csv": "64e47e3f881b9b8f2843dafeccb3111e497b50b416c7046020793692ddc8a72f",
+    "06_probabilities_test.csv": "a55b22100ad990a827e52516809b7ba8639587993b4743ebf28f50aa5fb4f848",
+    "06_frozen_protocol.json": "8e9dcfe0c07fc9ee01415c0ad69de39c1af974d37793be03b9f4220159a75bf1",
+    "phase1_deliverables.zip": "2bdd46a9f71b006aab8171f3ffb71fc9aacc0837b2ecb4082d5917da66854789"
+  }
+}
