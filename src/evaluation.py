@@ -385,8 +385,6 @@ def compare_feature_importance(
     model = pipeline["model"]
     names = design.get_feature_names_out()
     if isinstance(model, HistGradientBoostingClassifier):
-        # sklearn no publica feature_importances_ para este estimador.
-        # Los registros de sklearn 1.4.2 guardan la ganancia de cada split.
         weights = np.zeros(len(names))
         for stage in model._predictors:
             for tree in stage:

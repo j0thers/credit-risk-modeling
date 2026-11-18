@@ -259,7 +259,7 @@ def box_tidwell(X, y, base_design):
 
 
 def select_specification(design, y):
-    # El producto de tres subconjuntos binarios mantiene los efectos principales.
+    # Se conservan los efectos principales al contrastar interacciones.
     interaction_sets = [subset for size in range(4) for subset in combinations(ALL_INTERACTIONS, size)]
     curve_sets = [(*limit, *age) for limit, age in product(
         [(), *((curve,) for curve in LIMIT_CURVES)], [(), (AGE_CURVE,)],

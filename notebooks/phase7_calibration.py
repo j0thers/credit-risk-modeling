@@ -43,7 +43,7 @@ DEMOGRAPHIC_ORDER = {
 
 
 def read_frozen_predictions(path, y):
-    # Las predicciones de la evaluación comparativa se exportaron en el orden archivado y sin índice.
+    # La alineación con los índices archivados evita asociar PD y respuestas de clientes distintos.
     frame = pd.read_csv(path, float_precision="round_trip")
     np.testing.assert_array_equal(frame["y_true"], y.to_numpy())
     return frame.loc[:, list(LABELS)].set_axis(y.index)
@@ -123,7 +123,6 @@ def plot_demographics(audit, title):
     )
     fig.suptitle(f"Auditoría demográfica en prueba (n = 4.500) · {title}", fontweight="bold")
     positions = np.arange(len(audit), dtype=float)
-    # Deja un espacio entre bloques, en el orden declarado en la tabla.
     groups = audit.index.get_level_values("variable")
     changes = np.flatnonzero(groups[1:] != groups[:-1]) + 1
     for split in changes:

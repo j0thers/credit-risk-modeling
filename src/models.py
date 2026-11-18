@@ -29,7 +29,7 @@ INTERACTIONS = {
     "PAY_0_x_PAY_2": "PAY_2",
     "PAY_0_x_BILL_AMT1": "BILL_AMT1",
 }
-# Resultado del criterio de selección de la Fase 4 sobre el train archivado.
+# La especificación se seleccionó exclusivamente en entrenamiento.
 FINAL_CURVES = ("LIMIT_BAL_log",)
 FINAL_INTERACTIONS = ("PAY_0_x_LIMIT_BAL", "PAY_0_x_BILL_AMT1")
 
